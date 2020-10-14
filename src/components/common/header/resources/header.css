@@ -1,0 +1,24 @@
+#header {
+  background-image: url('science.webp');
+}
+
+.header-background-transparent {
+  background-color: rgba(52, 58, 64, .75);
+}
+
+.navbar-icon {
+  width: 25px;
+  height: 25px;
+  border: 0px;
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 2rem !important;
+  }
+}
+
+#header h2 {
+  line-height: 40px;
+}

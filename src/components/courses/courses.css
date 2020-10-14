@@ -1,0 +1,16 @@
+.sign-up-button {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.card {
+  padding-bottom: 30px;
+  height: 100%;
+}
+
+#hot-clicks button {
+  font-size: 1.7rem;
+}
