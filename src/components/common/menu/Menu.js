@@ -41,20 +41,21 @@ export default class Menu extends React.Component {
             <span className={"navbar-toggler-icon"}></span>
           </button>
           <div className={"collapse navbar-collapse " + this.state.menuAdditionalClassNames} id={"navigation-bar"}>
-            <ul className={"navbar-nav mr-auto mt-2 mt-lg-0"}>
+            <ul className={"navbar-nav mr-0 mt-2 mt-lg-0"}>
               <li className={"nav-item"}>
-                <Link to={routes.courses} className={'nav-link'}>Online képzéseink</Link>
-              </li>
-              <li className={"nav-item"}>
-                <Link to={routes.privateLessons} className={'nav-link'}>Privát órák</Link>
-              </li>
-              <li className={"nav-item"}>
-                <Link to={routes.teachers} className={'nav-link'}>Oktatóink</Link>
-              </li>
-              <li className={"nav-item"}>
-                <Link to={routes.contacts} className={'nav-link'}>Kapcsolat</Link>
+                <a href={"https://www.garudaacademy.eu"} target="_blank" rel="noopener noreferrer" className={'nav-link'}>Online képzéseink</a>
               </li>
             </ul>
+            <ul className={"navbar-nav mr-0 mt-2 mt-lg-0"}>
+              <li className={"nav-item"}>
+                <a href={"https://www.garudaacademy.eu"} target="_blank" rel="noopener noreferrer" className={'nav-link'}>Privát órák</a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="float-right">
+            <button className="btn btn-info mr-1">Regisztráció</button>
+            <button className="btn btn-success">Belépés</button>
           </div>
         </nav>
       </React.Fragment>
