@@ -1,10 +1,11 @@
 import React from 'react';
+import { connect } from "react-redux";
 import SideButton from './SideButton';
 import Menu from '../common/menu/Menu';
 import Footer from '../common/footer/Footer';
 import Facebook from '../common/facebook/Facebook';
 
-export default class MainPage extends React.Component {
+class MainPage extends React.Component {
   render() {
     return (
       <div>
@@ -34,3 +35,12 @@ export default class MainPage extends React.Component {
     );
   }
 }
+
+const selector = (store) => {
+  return {
+    token: store.token,
+    isLoggedIn: store.token.fetched && !store.token.error
+  };
+}
+
+export default connect(selector)(MainPage);
