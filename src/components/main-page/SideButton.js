@@ -13,7 +13,7 @@ export default class SideButton extends React.Component {
       <button
           type="button"
           className="btn btn-secondary rounded-0 bg-dark border-bottom-0 border-top-0 text-uppercase"
-          style={{"border-left": "5px solid #" + borderColor}}>
+          style={{"borderLeft": "5px solid #" + borderColor}}>
 
         <h3>{this.props.children}</h3>
       </button>
