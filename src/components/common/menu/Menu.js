@@ -54,8 +54,8 @@ export default class Menu extends React.Component {
           </div>
 
           <div className="float-right">
-            <button className="btn btn-info mr-1">Regisztráció</button>
-            <button className="btn btn-success">Belépés</button>
+            <Link to="/registration" className="btn btn-info mr-1">Regisztráció</Link>
+            <Link to="/login" className="btn btn-success">Belépés</Link>
           </div>
         </nav>
       </React.Fragment>
