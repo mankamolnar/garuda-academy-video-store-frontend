@@ -1,11 +1,12 @@
 import React from 'react';
+import { connect } from "react-redux";
 import routes from '../../Routes';
 import logo from './logo.png';
 import hun from './hun.png';
 import './menu.css';
 import { Link } from 'react-router-dom';
 
-export default class Menu extends React.Component {
+class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,6 +24,15 @@ export default class Menu extends React.Component {
   }
   
   render() {
+    let authButtons = <React.Fragment>
+      <Link to="/registration" className="btn btn-info mr-1">Regisztráció</Link>
+      <Link to="/login" className="btn btn-success">Belépés</Link>
+    </React.Fragment>;
+
+    if (this.props.isLoggedIn) {
+      authButtons = <b>Bejelentkezve!</b>;
+    }
+
     return (
       <React.Fragment>
         <nav className={"navbar navbar-dark bg-dark text-white"}>
@@ -54,11 +64,19 @@ export default class Menu extends React.Component {
           </div>
 
           <div className="float-right">
-            <Link to="/registration" className="btn btn-info mr-1">Regisztráció</Link>
-            <Link to="/login" className="btn btn-success">Belépés</Link>
+            {authButtons}
           </div>
         </nav>
       </React.Fragment>
     );
   }
 }
+
+const selector = (store) => {
+  return {
+    token: store.token,
+    isLoggedIn: store.token.fetched && !store.token.error
+  };
+}
+
+export default connect(selector)(Menu);
