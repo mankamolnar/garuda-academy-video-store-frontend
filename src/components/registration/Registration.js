@@ -56,9 +56,9 @@ class Registration extends React.Component {
     }
 
     return (
-      <div>
+      <>
         <Menu />
-        <div className="row">
+        <div className="row fill-container">
           <div className="col-md-1"></div>
           <div className="col-md-10">
             <h1>Regisztráció</h1>
@@ -97,7 +97,7 @@ class Registration extends React.Component {
         
         <Facebook />
         <Footer />
-      </div>
+      </>
     );
   }
 }

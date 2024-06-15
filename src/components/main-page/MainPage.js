@@ -10,7 +10,7 @@ class MainPage extends React.Component {
     return (
       <>
         <Menu />
-        <div className="row">
+        <div className="row fill-container">
           <div className="col-md-2 p-0 bg-dark">
             <SideBar />
           </div>

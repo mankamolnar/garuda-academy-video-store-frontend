@@ -34,9 +34,9 @@ class Video extends React.Component {
       video = this.props.videos.videos.filter((element) => element.id === parseInt(this.props.match.params.id))[0];
     }
 
-    return <div>
+    return <>
       <Menu />
-      <div className="row">
+      <div className="row fill-container">
         <div className="col-md-2 p-0 bg-dark">
           <SideBar />
         </div>
@@ -50,7 +50,7 @@ class Video extends React.Component {
       
       <Facebook />
       <Footer />
-    </div>;
+    </>;
   }
 }
 

@@ -85,9 +85,9 @@ class Login extends React.Component {
     }
 
     return (
-      <div>
+      <>
         <Menu />
-        <div className="row">
+        <div className="row fill-container">
           <div className="col-md-1"></div>
           <div className="col-md-10">
 
@@ -112,7 +112,7 @@ class Login extends React.Component {
         
         <Facebook />
         <Footer />
-      </div>
+      </>
     );
   }
 }
