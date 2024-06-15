@@ -14,7 +14,7 @@ class MainPage extends React.Component {
           <div className="col-md-2 p-0 bg-deep-dark">
             <SideBar />
           </div>
-          <div className="col-md-10">
+          <div className="col-md-10 text-light">
             <h1>Nézz oktatóvideókat!</h1>
             Kattints a bal menüben az ingyenes tartalmakért vagy jelentkezz be!
           </div>

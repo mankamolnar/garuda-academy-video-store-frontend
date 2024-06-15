@@ -29,7 +29,7 @@ class SideButton extends React.Component {
           to={"/videok/" + categoryId.get()}
           onClick={() => this.props._fetchVideos(categoryId.get())}
           type="button"
-          className="btn btn-secondary rounded-0 bg-deep-dark-hover border-bottom-0 border-top-0 text-uppercase"
+          className="btn btn-secondary rounded-0 bg-deep-dark-hover border-bottom-0 border-top-0 border-right-0 text-uppercase"
           style={{"borderLeft": "5px solid #" + borderColor}}>
 
         <h3>{this.props.children}</h3>

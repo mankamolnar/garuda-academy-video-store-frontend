@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import routes from '../../Routes';
-import logo from './logo.png';
-import hun from './hun.png';
+import logo from './logo-wide-dark.png';
 import './menu.css';
 import { Link } from 'react-router-dom';
 
@@ -35,14 +34,16 @@ class Menu extends React.Component {
 
     return (
       <React.Fragment>
-        <nav className={"navbar navbar-dark bg-dark text-white"}>
+        
+        {/*<nav className={"navbar navbar-dark bg-dark text-white"}>
           <div className={"float-left"}>
           </div>
           <div className={"float-right"}>
             <img src={hun} className={"navbar-icon"} alt={"Weboldal Magyar nyelven történő megjelenítése!"} />
           </div>
-        </nav>
-        <nav className={"navbar navbar-expand-lg navbar-light bg-light"}>
+        </nav>*/}
+
+        <nav className={"navbar navbar-expand-lg navbar-dark bg-deep-dark"}>
           <Link to={routes.mainPage} className={"responsive-logo"}>
             <img src={logo} alt='Garuda academy' className={"responsive-logo"} />
           </Link>
