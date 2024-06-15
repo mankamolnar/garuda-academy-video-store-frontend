@@ -1,11 +1,11 @@
 import React from 'react';
 import { Redirect } from 'react-router';
+import { useParams } from 'react-router-dom';
 import { connect } from "react-redux";
 import * as LoginActions from './../../redux/actions/loginActions';
 import Menu from '../common/menu/Menu';
 import Footer from '../common/footer/Footer';
 import Facebook from '../common/facebook/Facebook';
-
 
 class Login extends React.Component {
   constructor() {
@@ -13,10 +13,33 @@ class Login extends React.Component {
     this.doLogin = this.doLogin.bind(this);
     this.onUsernameChange = this.onUsernameChange.bind(this);
     this.onPasswordChange = this.onPasswordChange.bind(this);
+    this.firstRender = React.createRef();
+    this.firstRender.current = true;
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      message: ""
+    };
+  }
+
+  componentDidMount() {
+    this.firstRender.current = true;
+    let message = this.getAlertMessage();
+    
+    if (!message && this.state.message) {
+      this.setState({ message: "" });
+
+    } else if (message && !this.state.message) {
+      this.setState({ message: <div className="alert alert-danger">{ decodeURI(message) }</div> });
     }
+  }
+
+  componentDidUpdate() {
+    this.firstRender.current = false;
+  }
+
+  componentWillUnmount() {
+    this.props._truncateLoginOnError();
   }
 
   onUsernameChange(event) {
@@ -34,12 +57,30 @@ class Login extends React.Component {
     );
   }
 
-  render() {
-    let message = "";
+  getAlertMessage() {
+    const requestParams = this.props.location.search.replace("?", "");
+    const requestParamKeyValuePairs = requestParams.split("&");
+    const messageKeyValuePair = requestParamKeyValuePairs.filter(keyValuePair => keyValuePair.startsWith("message"));
 
-    if (this.props.token.fetched && this.props.token.error) {
-      message = <div className="alert alert-danger">Valami hiba történt! Próbáld újra!</div>;
+    if (messageKeyValuePair.length > 0) {
+      const message = messageKeyValuePair[0].split("=")[1];
+      return message;
+    }
+
+    return "";
+  }
+
+  render() {
+    console.log("render")
+    let message = null;
+    
+    if (!this.firstRender.current && this.props.token.fetched && this.props.token.error) {
+      message = <div className="alert alert-danger">
+        {this.props.token.token.errorMessage}
+      </div>;
+
     } else if (this.props.token.fetched && !this.props.token.error) {
+      localStorage.setItem("apiKey", this.props.token.token.jwt);
       message = <Redirect to="/" />;
     }
 
@@ -50,7 +91,8 @@ class Login extends React.Component {
           <div className="col-md-1"></div>
           <div className="col-md-10">
 
-            {message}
+            { this.state.message ? this.state.message : null }
+            { message ? message : null }
 
             <h1>Bejelentkezés</h1>
             <form>
@@ -82,7 +124,9 @@ const selector = (store) => {
 };
 
 const dispatcher = (dispatch) => ({
-  _fetchToken: (...args) => dispatch(LoginActions.fetchToken(...args))
+  _fetchToken: (...args) => dispatch(LoginActions.fetchToken(...args)),
+  _truncateLoginOnError: () => dispatch({type: "LOGIN_TUNCATE_ON_ERROR"})
+  //_clearRedux: (...args) => dispatch({type: "LOGIN_CLEAR"})
 });
 
 export default connect(selector, dispatcher)(Login);
