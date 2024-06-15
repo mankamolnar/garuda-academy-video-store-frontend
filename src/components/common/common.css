@@ -14,3 +14,25 @@
 .description_title {
   text-decoration: underline;
 }
+
+.bg-deep-dark {
+  background-color: #151617 !important;
+}
+
+.bg-deep-dark-hover {
+  background-color: #151617 !important;
+}
+
+.bg-deep-dark-hover:hover {
+  background-color: #707477 !important;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.fill-container {
+  flex: 1 !important;
+}

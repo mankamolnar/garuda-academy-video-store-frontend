@@ -8,7 +8,7 @@ import line from '../../common/menu/line-big.png';
 export default class Facebook extends React.Component {
   render() {
     return (
-      <div className={"row bg-dark"}>
+      <div className={"row bg-deep-dark"}>
         <div className={"col-1"}></div>
         <div className={"col-md-10 mt-3 mb-3 text-center"}>
           <h2 className="h2 text-uppercase mb-3"><span className="border-light border-bottom text-light">Vedd fel velünk a kapcsolatot!</span></h2>
