@@ -37,7 +37,7 @@ class Video extends React.Component {
     return <>
       <Menu />
       <div className="row fill-container">
-        <div className="col-md-2 p-0 bg-dark">
+        <div className="col-md-2 p-0 bg-deep-dark">
           <SideBar />
         </div>
         <div className="col-md-10">

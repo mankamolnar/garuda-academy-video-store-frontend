@@ -30,7 +30,7 @@ class Login extends React.Component {
       this.setState({ message: "" });
 
     } else if (message && !this.state.message) {
-      this.setState({ message: <div className="alert alert-danger">{ decodeURI(message) }</div> });
+      this.setState({ message: <div className="alert alert-danger mt-3">{ decodeURI(message) }</div> });
     }
   }
 
@@ -75,7 +75,7 @@ class Login extends React.Component {
     let message = null;
     
     if (!this.firstRender.current && this.props.token.fetched && this.props.token.error) {
-      message = <div className="alert alert-danger">
+      message = <div className="alert alert-danger mt-3">
         {this.props.token.token.errorMessage}
       </div>;
 
@@ -87,7 +87,7 @@ class Login extends React.Component {
     return (
       <>
         <Menu />
-        <div className="row fill-container">
+        <div className="row fill-container text-light">
           <div className="col-md-1"></div>
           <div className="col-md-10">
 

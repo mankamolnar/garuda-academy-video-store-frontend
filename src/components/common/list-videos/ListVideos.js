@@ -10,7 +10,7 @@ class ListVideos extends React.Component {
     }
     let buttons = this.props.videos.map((element) => (
       <Link
-          className={"btn btn-dark btn-lg mr-3 mb-3"}
+          className={"btn btn-secondary btn-lg mr-3 mb-3"}
           onClick={() => {this.props._fetchVideo(element.id)}}
           key={"video-button-" + element.id}
           to={"/video/" + element.id}>

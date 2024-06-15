@@ -24,7 +24,7 @@ export default function Comments(props) {
     sendComment(props.video.id, comment, dispatch);
   };
 
-  return <div>
+  return <div className='text-light'>
     
     {/* CÍMSOR */}
     <h4>Kommentek</h4>

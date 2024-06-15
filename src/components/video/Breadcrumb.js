@@ -7,8 +7,8 @@ export default class Breadcrumb extends React.Component {
       return null;
     }
 
-    return <nav aria-label="breadcrumb">
-      <ol className="breadcrumb">
+    return <nav aria-label="breadcrumb" className="mt-3">
+      <ol className="breadcrumb bg-deep-dark">
         <li className="breadcrumb-item"><Link to="/">Főoldal</Link></li>
         <li className="breadcrumb-item"><Link to={"/videok/" + this.props.video.category.id}>{this.props.video.category.name}</Link></li>
         <li className="breadcrumb-item active" aria-current="page">{this.props.video.name}</li>

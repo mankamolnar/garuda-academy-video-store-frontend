@@ -60,7 +60,7 @@ class Registration extends React.Component {
         <Menu />
         <div className="row fill-container">
           <div className="col-md-1"></div>
-          <div className="col-md-10">
+          <div className="col-md-10 text-light">
             <h1>Regisztráció</h1>
 
               {alert}

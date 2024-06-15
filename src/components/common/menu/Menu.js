@@ -29,7 +29,7 @@ class Menu extends React.Component {
     </React.Fragment>;
 
     if (this.props.isLoggedIn) {
-      authButtons = <b>Bejelentkezve!</b>;
+      authButtons = <b className='text-navbar'>Bejelentkezve!</b>;
     }
 
     return (
