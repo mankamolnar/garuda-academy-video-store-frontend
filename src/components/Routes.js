@@ -1,7 +1,9 @@
 const routes = {
   mainPage: '/',
   registration: '/registration',
-  login: "/login"
+  login: "/login",
+  videok: "/videok/:id",
+  video: "/video/:id"
 };
 
 export default routes;
