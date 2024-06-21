@@ -8,7 +8,7 @@ export default function LoadingScreen() {
       </div>
     </div>
     <div className="d-flex justify-content-center mt-3"> 
-      <h1>Automata bejelentkezés</h1>
+      <h1 className='text-light'>Automata bejelentkezés</h1>
     </div>
   </>);
 }
