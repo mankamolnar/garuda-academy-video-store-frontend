@@ -11,7 +11,7 @@ export default class Facebook extends React.Component {
       <div className={"row bg-deep-dark"}>
         <div className={"col-1"}></div>
         <div className={"col-md-10 mt-3 mb-3 text-center"}>
-          <h2 className="h2 text-uppercase mb-3"><span className="border-light border-bottom text-light">Vedd fel velünk a kapcsolatot!</span></h2>
+          <h2 className="h2 text-uppercase mb-3"><span className="border-light border-bottom text-light">Vedd fel velem a kapcsolatot!</span></h2>
           <div>
             <a href={"https://www.facebook.com/garudaacademy"} className={"contact_list_anchor"} target="_blank" rel="noopener noreferrer"><img src={facebook} className={"contact_list_icon"} alt={'Facebook oldal megtekintése!'} /></a>
             <a href={"https://m.me/garudaacademy"} className={"contact_list_anchor"} target="_blank" rel="noopener noreferrer"><img src={messenger} className={"contact_list_icon"} alt={'Kapcsolatfelvétel Messengerrel!'} /></a>
