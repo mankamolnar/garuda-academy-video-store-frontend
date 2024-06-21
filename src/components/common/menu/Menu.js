@@ -2,6 +2,9 @@ import React from 'react';
 import { connect } from "react-redux";
 import routes from '../../Routes';
 import logo from './logo-wide-dark.png';
+import logoBetaBlue from './logo-wide-dark-beta-blue.png';
+import logoBetaYellowBlood from './logo-wide-dark-beta-yellow-blood.png';
+import logoBetaYellowPink from './logo-wide-dark-beta-yellow-pink.png';
 import './menu.css';
 import { Link } from 'react-router-dom';
 
@@ -45,26 +48,28 @@ class Menu extends React.Component {
 
         <nav className={"navbar navbar-expand-lg navbar-dark bg-deep-dark"}>
           <Link to={routes.mainPage} className={"responsive-logo"}>
-            <img src={logo} alt='Garuda academy' className={"responsive-logo"} />
+            <img src={logoBetaYellowPink} alt='Garuda academy' className={"responsive-logo"} />
           </Link>
 
           <button className={"navbar-toggler"} type="button" aria-label="Show Menu" onClick={this.changeMenuState}>
             <span className={"navbar-toggler-icon"}></span>
           </button>
+
           <div className={"collapse navbar-collapse " + this.state.menuAdditionalClassNames} id={"navigation-bar"}>
             <ul className={"navbar-nav mr-0 mt-2 mt-lg-0"}>
               <li className={"nav-item"}>
                 <a href={"https://www.garudaacademy.eu"} target="_blank" rel="noopener noreferrer" className={'nav-link'}>Online képzéseink</a>
               </li>
-            </ul>
-            <ul className={"navbar-nav mr-0 mt-2 mt-lg-0"}>
-              <li className={"nav-item"}>
-                <a href={"https://www.garudaacademy.eu"} target="_blank" rel="noopener noreferrer" className={'nav-link'}>Privát órák</a>
+              <li className={"nav-item navbar-auth-buttons"}>
+                <Link to={routes.registration} className={'nav-link'}>Regisztráció</Link>
+              </li>
+              <li className={"nav-item navbar-auth-buttons"}>
+                <Link to={routes.login} className={'nav-link'}>Belépés</Link>
               </li>
             </ul>
           </div>
 
-          <div className="float-right">
+          <div className="auth-buttons">
             {authButtons}
           </div>
         </nav>

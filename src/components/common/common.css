@@ -4,6 +4,12 @@
   margin-right: 0px;
 }
 
+@media (max-width: 768px) {
+  .row.fill-container {
+    display: block !important;
+  }
+}
+
 .box_icon {
   width: 18px;
   height: 18px;

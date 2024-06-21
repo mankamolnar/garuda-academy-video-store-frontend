@@ -1,8 +1,21 @@
+@media (max-width: 992px) {
+  .auth-buttons {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-auth-buttons {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .responsive-logo {
     width: 220px;
   }
 }
+
 @media (min-width: 768px) {
   .responsive-logo {
     width: auto;
