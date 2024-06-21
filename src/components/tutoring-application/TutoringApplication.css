@@ -1,0 +1,14 @@
+.description-avatar {
+    width: 200px;
+}
+
+.employer-logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.employer-logo-container img {
+    height: 70px;
+}
