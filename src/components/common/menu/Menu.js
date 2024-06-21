@@ -58,7 +58,7 @@ class Menu extends React.Component {
           <div className={"collapse navbar-collapse " + this.state.menuAdditionalClassNames} id={"navigation-bar"}>
             <ul className={"navbar-nav mr-0 mt-2 mt-lg-0"}>
               <li className={"nav-item"}>
-                <a href={"https://www.garudaacademy.eu"} target="_blank" rel="noopener noreferrer" className={'nav-link'}>Online képzéseink</a>
+                <Link to={routes.tutoringApplication} className={'nav-link'}>Privát óra jelentkezés</Link>
               </li>
               <li className={"nav-item navbar-auth-buttons"}>
                 <Link to={routes.registration} className={'nav-link'}>Regisztráció</Link>
