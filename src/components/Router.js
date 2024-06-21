@@ -14,6 +14,7 @@ import Registration from './registration/Registration';
 import Login from './login/Login';
 import Videok from './videok/Videok';
 import Video from './video/Video';
+import TutoringApplication from './tutoring-application/TutoringApplication';
 
 function Router() {
   return (
@@ -26,6 +27,7 @@ function Router() {
             <Route path={routes.login} component={Login} exact />
             <Route path={routes.videok} component={Videok} exact />
             <Route path={routes.video} component={Video} exact />
+            <Route path={routes.tutoringApplication} component={TutoringApplication} exact />
             <Route path="*" component={c404} />
           </Switch>
         </ScrollToTop>
