@@ -3,7 +3,7 @@ import axios from "axios";
 export function fetchVideos(category) {
   return function(dispatch) {
     axios.get(
-        "http://localhost:8080/videos/get-by-category/" + category)
+        "https://garuda-academy-spring-api.onrender.com/videos/get-by-category/" + category)
       .then((response) => {
         dispatch({type: "VIDEOS_BY_CATEGORY_FULFILLED", payload: response.data});
       }).catch((err) => {
@@ -15,7 +15,7 @@ export function fetchVideos(category) {
 export function fetchVideo(id) {
   return function(dispatch) {
     axios.get(
-        "http://localhost:8080/videos/get/" + id)
+        "https://garuda-academy-spring-api.onrender.com/videos/get/" + id)
       .then((response) => {
         dispatch({type: "VIDEOS_BY_ID_FULFILLED", payload: response.data});
       }).catch((err) => {

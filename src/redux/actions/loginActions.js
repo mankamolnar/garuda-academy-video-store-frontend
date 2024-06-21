@@ -3,7 +3,7 @@ import axios from "axios";
 export function fetchToken(username, password) {
   return function(dispatch) {
     axios.post(
-        "http://localhost:8080/authentication/authenticate", 
+        "https://garuda-academy-spring-api.onrender.com/authentication/authenticate", 
         { username: username, password: password })
       .then((response) => {
         dispatch({type: "LOGIN_FULFILLED", payload: response.data});
@@ -15,7 +15,7 @@ export function fetchToken(username, password) {
 
 export function verifyToken(token, dispatch) {
   axios.post(
-    "http://localhost:8080/authentication/verify-token", 
+    "https://garuda-academy-spring-api.onrender.com/authentication/verify-token", 
     { token: token })
   .then((response) => {
     if (response.data.valid) {
@@ -32,7 +32,7 @@ export function verifyToken(token, dispatch) {
 export function doRegistration(email, username, password) {
   return function(dispatch) {
     axios.post(
-        "http://localhost:8080/users/create", 
+        "https://garuda-academy-spring-api.onrender.com/users/create", 
         { email: email, username: username, password: password })
       .then((response) => {
         dispatch({type: "REGISTRATION_FULFILLED", payload: response.data});
