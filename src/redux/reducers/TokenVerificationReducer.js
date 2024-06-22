@@ -14,6 +14,9 @@ export default function reducer(state=initialState, action) {
     case "TOKEN_VERIFICATION_REJECTED": {
       return {...state, fetching: false, fetched: true, error: true, token: {errorMessage: action.errorMessage}};
     }
+    case "TOKEN_REJECTED": {
+      return {...state, fetching: false, fetched: true, error: true, token: {errorMessage: action.errorMessage}};
+    }
     default: {
       return state;
     }
