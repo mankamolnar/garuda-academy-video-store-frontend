@@ -20,6 +20,13 @@ function TutoringApplication() {
         </div>
         <div className="col-md-10 text-light">
             <img src={sexyBoy} className='mt-3 mr-3 float-left description-avatar' />
+            
+            <div className='mt-3'>
+                <a href="https://www.buymeacoffee.com/garudaacademy/extras" target='_blank'>
+                    <img src="https://img.buymeacoffee.com/button-api/?text=Óra csomagok megtekintése!&emoji=💻&slug=garudaacademy&button_colour=6d9639&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" />
+                </a>
+            </div>
+            
             <h2 className='mt-3'>Kiknek segítettem már?</h2>
             Informatika érettségizőknek, Egyetemistáknak (Magyar és külföldi egyetemekről is), Munkakeresőknek, 
             Alternatív képzésben tanulóknak (Codecool, Green Fox, A&K Akadémia stb.), OKJ-n tanulóknak
@@ -66,6 +73,7 @@ function TutoringApplication() {
                     <img src={ifrc} alt='GE Healthcare - General Electric' />
                 </div>
             </div>
+        
         </div>
         </div>
         
